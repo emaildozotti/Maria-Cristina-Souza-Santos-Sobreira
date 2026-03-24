@@ -100,7 +100,7 @@ export const Hero = () => {
           }}
         >
           {/* Left: Text */}
-          <div>
+          <div className="hero-text-col">
             <FadeIn delay={0}>
               <p className="eyebrow-ultra" style={{ marginBottom: '1.5rem' }}>NO LIMITE</p>
             </FadeIn>
@@ -187,7 +187,7 @@ export const Hero = () => {
           </div>
 
           {/* Right: Photo */}
-          <FadeIn delay={0.25} direction="left">
+          <FadeIn delay={0.25} direction="left" className="hero-photo-col">
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
               {/* L-frame container */}
               <div style={{
@@ -288,8 +288,11 @@ export const Hero = () => {
             grid-template-columns: 1fr !important;
             gap: 2.5rem !important;
           }
-          .hero-grid > *:last-child {
-            order: -1;
+          .hero-text-col {
+            order: 2;
+          }
+          .hero-photo-col {
+            order: 1;
           }
           .hero-photo {
             width: 100% !important;
