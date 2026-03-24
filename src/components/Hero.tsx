@@ -288,12 +288,6 @@ export const Hero = () => {
             grid-template-columns: 1fr !important;
             gap: 2.5rem !important;
           }
-          .hero-text-col {
-            order: 2;
-          }
-          .hero-photo-col {
-            order: 1;
-          }
           .hero-photo {
             width: 100% !important;
             max-width: 300px !important;
