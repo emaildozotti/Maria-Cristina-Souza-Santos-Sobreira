@@ -37,12 +37,15 @@ export const PainPoints = () => {
           </div>
         </FadeIn>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'minmax(280px, 380px) 1fr',
-          gap: '5rem',
-          alignItems: 'start',
-        }}>
+        <div
+          className="pain-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(280px, 380px) 1fr',
+            gap: '5rem',
+            alignItems: 'start',
+          }}
+        >
           {/* Sticky sidebar */}
           <div style={{ position: 'sticky', top: '6rem' }}>
             <FadeIn delay={0.1}>
@@ -127,6 +130,18 @@ export const PainPoints = () => {
           </div>
         </FadeIn>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .pain-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+          .pain-grid > div:first-child {
+            position: static !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
