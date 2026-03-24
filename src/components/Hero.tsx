@@ -90,12 +90,15 @@ export const Hero = () => {
       />
 
       <div className="container-ultra" style={{ position: 'relative', zIndex: 1, paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'clamp(280px, 55%, 640px) 1fr',
-          gap: '4rem',
-          alignItems: 'center',
-        }}>
+        <div
+          className="hero-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'clamp(280px, 55%, 640px) 1fr',
+            gap: '4rem',
+            alignItems: 'center',
+          }}
+        >
           {/* Left: Text */}
           <div>
             <FadeIn delay={0}>
@@ -206,7 +209,7 @@ export const Hero = () => {
                 }} />
 
                 {/* Photo container */}
-                <div style={{
+                <div className="hero-photo" style={{
                   position: 'relative',
                   borderRadius: '16px 4px 16px 4px',
                   overflow: 'hidden',
@@ -278,6 +281,23 @@ export const Hero = () => {
           </FadeIn>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+          .hero-grid > *:last-child {
+            order: -1;
+          }
+          .hero-photo {
+            width: 100% !important;
+            max-width: 300px !important;
+            margin: 0 auto !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

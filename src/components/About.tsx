@@ -33,12 +33,15 @@ export const About = () => {
   return (
     <section style={{ backgroundColor: '#F0E8DA', position: 'relative', overflow: 'hidden' }}>
       <div className="container-ultra section-padding">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr minmax(280px, 420px)',
-          gap: '5rem',
-          alignItems: 'center',
-        }}>
+        <div
+          className="about-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr minmax(280px, 420px)',
+            gap: '5rem',
+            alignItems: 'center',
+          }}
+        >
           {/* Left: Text */}
           <div>
             <FadeIn delay={0}>
@@ -203,6 +206,15 @@ export const About = () => {
           </FadeIn>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .about-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
