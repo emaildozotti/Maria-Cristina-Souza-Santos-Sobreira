@@ -3,7 +3,7 @@ import { motion } from 'motion/react'
 import { FadeIn } from './FadeIn'
 import { RootsDivider } from './RootsDivider'
 
-const VIDEO_ID = 'AddLHCszm5k'
+const VIDEO_ID = 'qo0wSGLF5ro'
 
 export const VideoSection = () => {
   const [playing, setPlaying] = useState(false)
